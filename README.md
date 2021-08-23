@@ -2,20 +2,18 @@
 ## Application:
 Credit risk poses a classification problem that’s inherently imbalanced. This is because healthy loans easily outnumber risky loans. In this Challenge, you’ll use various techniques to train and evaluate models with imbalanced classes. You’ll use a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
 
-In this Challenge, you’ll assume the role of an advisor in one of the top five financial advisory firms in the world. Competitors are fierce, so you want to propose a novel approach to assembling investment portfolios that are based on cryptocurrencies. Instead of basing your proposal on only returns and volatility, you want to include other factors that might impact the crypto market—leading to better performance for your portfolio.
-
-When you present the idea, your manager loves it! So, you’re asked to create a prototype for submitting your crypto portfolio proposal to the company board of directors.
-
-
 ---
 ## Technologies
 
 In this challenge, you’ll use [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/) and the following  **[python version 3.8.5](https://www.python.org/downloads/)** libraries:
 
-* [scikit-learn](https://scikit-learn.org/stable/)
-*  [hvPlot](https://hvplot.holoviz.org/index.html)
+
 * [pandas](https://pandas.pydata.org/docs/)
 
+* [scikit-learn](https://scikit-learn.org/stable/)
+    * [scikit metrics](https://scikit-learn.org/stable/modules/model_evaluation.html) 
+    *  [imbalanced-learn](https://imbalanced-learn.org/stable/) 
+    *  [linear model](https://scikit-learn.org/stable/modules/linear_model.html)
 ---
 ## Installation Guide
 
@@ -26,23 +24,22 @@ In this challenge, you’ll use [Jupyter Lab](https://jupyterlab.readthedocs.io/
 ```
 conda activate dev
 ```
-### 2. When the environment is active, run the following in your terminal:
+### 2. When the environment is active, run the following in your terminal to check if the scikit-learn and imbalance-learn libraries are installed on your machine:
 ```
 conda list scikit-learn
-conda list hvplot
+conda list imbalanced-learn
 ```
-### If the scikit-learn and hvPlot libraries are installed on your machine, your terminal will display the following:
-![](Images/scikitlearn-hvplot-confirm.png)
-### If you see scikit-learn and hvPlot listed in the terminal, you’re all set!
+### If you see scikit-learn and imbalance-learn listed in the terminal, you’re all set!
 
   ### 1. Install scikit-learn
 ```
 pip install -U scikit-learn
 ```
-### 2. Install hvPlot
+### 2. Install imbalance-learn
 ```
-conda install -c pyviz hvplot
+ conda install -c conda-forge imbalanced-learn
 ```
+![install-imbalanced-learn](Images/install-imbalanced-learn.png)
 ---
 ## Usage
 
@@ -52,19 +49,15 @@ To use this application, simply clone the repository and open jupyter lab from g
 jupyter lab
 ```
 
-Upon launching the application in Jupyter lab notebook, run the file by using the run button on the top of the notepad.
-
-![run](Images/run.png)
 
 ---
 Examples:
-In this application, these are the analysis we did using elbow curve and scatter lots:
+In this application, these are the analysis reports using original data and oversampled data:
+* Classification Report for original data using Logistic Regression model:
+![originalcr](Images/originalcr.png)
 
-![elbowcurve](Images/elbowcurve.png)
-![scatterplot-pricechange](Images/scatterplot-pricechange.png)
-![k4scatterplot](Images/k4scatterplot.PNG)
-![k5scatterplot](Images/k5scatterplot.PNG)
-
+* Classification of data using Oversampled data:
+![imbalancedcr](Images/imbalancedcr.png)
 ---
 
 ## Contributors

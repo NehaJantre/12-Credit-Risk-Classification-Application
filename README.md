@@ -51,7 +51,7 @@ jupyter lab
 
 
 ---
-Examples:
+## Examples:
 In this application, these are the analysis reports using original data and oversampled data:
 * Classification Report for original data using Logistic Regression model:
 ![originalcr](Images/originalcr.png)
